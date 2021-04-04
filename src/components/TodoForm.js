@@ -1,7 +1,5 @@
 import React from "react";
 
-//You must call states and functions from App.js and place them in component function
-
 function TodoForm({ inputText, setInputText, inputTime, setInputTime, todoItems, setTodoItems }) {
     function TodoTextInput(event) {
         setInputText(event.target.value);
@@ -23,7 +21,6 @@ function TodoForm({ inputText, setInputText, inputTime, setInputTime, todoItems,
             alert("You forgot to enter in the time");
         } else {
             setTodoItems([...todoItems, { text: inputText, time: inputTime, id: Math.random() * 10000 }]);
-            //Clears textbox after submit is pressed
             setInputText("");
             setInputTime("");
         }

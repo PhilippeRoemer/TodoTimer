@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 function App() {
     const [inputText, setInputText] = useState("");
@@ -14,6 +15,7 @@ function App() {
                 <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
                 <h3>{darkMode ? "Dark" : "Light"} mode enabled</h3>
                 <TodoForm inputText={inputText} setInputText={setInputText} inputTime={inputTime} setInputTime={setInputTime} todoItems={todoItems} setTodoItems={setTodoItems} />
+                <TodoList todoItems={todoItems} setTodoItems={setTodoItems} />
             </div>
         </div>
     );
