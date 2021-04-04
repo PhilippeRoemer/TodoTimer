@@ -16,3 +16,8 @@
     height: 100%;
     transition: background-color 0.25s ease-in-out;
 }
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
