@@ -12,8 +12,10 @@ function App() {
     return (
         <div className={darkMode ? "dark-mode" : "light-mode"}>
             <div className="container">
-                <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
-                <h3>{darkMode ? "Dark" : "Light"} mode enabled</h3>
+                <div className="DarkLightToggle">
+                    <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+                    <h3>{darkMode ? "Dark" : "Light"} mode enabled</h3>
+                </div>
                 <TodoForm inputText={inputText} setInputText={setInputText} inputTime={inputTime} setInputTime={setInputTime} todoItems={todoItems} setTodoItems={setTodoItems} />
                 <TodoList todoItems={todoItems} setTodoItems={setTodoItems} />
             </div>

@@ -21,8 +21,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
     return (
         <div>
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
-                {text}
-                {time}
+                {text} <span>Task Time:{time}</span>
             </li>
             <button onClick={completeHandler}>
                 <i>Complete</i>
