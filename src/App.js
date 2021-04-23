@@ -22,7 +22,6 @@ function App() {
                 </div>
                 <TodoForm inputText={inputText} setInputText={setInputText} inputTime={inputTime} setInputTime={setInputTime} todoItems={todoItems} setTodoItems={setTodoItems} />
                 <TodoList todoItems={todoItems} setTodoItems={setTodoItems} />
-                <button onClick={() => setModalIsOpen(true)}>Open Modal</button>
                 <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
                     <p>Timer</p>
                     <button onClick={() => setModalIsOpen(false)}>Close</button>
