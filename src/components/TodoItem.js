@@ -43,11 +43,9 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                     {({ start, resume, pause, stop, reset, timerState }) => (
                         <React.Fragment>
                             <div>
-                                <Timer.Days /> days
                                 <Timer.Hours /> hours
                                 <Timer.Minutes /> minutes
                                 <Timer.Seconds /> seconds
-                                <Timer.Milliseconds /> milliseconds
                             </div>
                             <div>{timerState}</div>
                             <br />
