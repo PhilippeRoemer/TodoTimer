@@ -40,14 +40,13 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                 <p>Task Time:{time}</p>
                 <button onClick={() => setModalIsOpen(false)}>Close</button>
                 <Timer initialTime={setTime} startImmediately={false} direction="backward">
-                    {({ start, resume, pause, stop, reset, timerState }) => (
+                    {({ start, resume, pause, stop, reset }) => (
                         <React.Fragment>
                             <div>
                                 <Timer.Hours /> hours
                                 <Timer.Minutes /> minutes
                                 <Timer.Seconds /> seconds
                             </div>
-                            <div>{timerState}</div>
                             <br />
                             <div>
                                 <button onClick={start}>Start</button>
