@@ -19,6 +19,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                 return item;
             })
         );
+        setModalIsOpen(false);
     };
 
     const setTime = time * 60000;
@@ -27,23 +28,19 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
     return (
         <div>
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
-                {text} <span>Task Time:{time}</span>
-            </li>
-            <button onClick={completeHandler}>
-                <i>Complete</i>
-            </button>
-            <button onClick={deleteHandler}>
-                <i>Delete</i>
-            </button>
+                {text}: <span>{time} Minutes</span>
+            </li>{" "}
             <button onClick={() => setModalIsOpen(true)}>Start Task</button>
+            <button onClick={completeHandler}>Completed</button>
+            <button onClick={deleteHandler}>Remove</button>
             <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
-                <p>Task Time:{time}</p>
+                <p>Task Time:{time} Minutes</p>
                 <button onClick={() => setModalIsOpen(false)}>Close</button>
-                <Timer initialTime={setTime} startImmediately={false} direction="backward">
+
+                <Timer initialTime={setTime} startImmediately={true} direction="backward" lastUnit="m">
                     {({ start, resume, pause, stop, reset }) => (
                         <React.Fragment>
                             <div>
-                                <Timer.Hours /> hours
                                 <Timer.Minutes /> minutes
                                 <Timer.Seconds /> seconds
                             </div>
@@ -54,6 +51,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                                 <button onClick={resume}>Resume</button>
                                 <button onClick={stop}>Stop</button>
                                 <button onClick={reset}>Reset</button>
+                                <button onClick={completeHandler}>Completed</button>
                             </div>
                         </React.Fragment>
                     )}
