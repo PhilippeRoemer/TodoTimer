@@ -32,8 +32,8 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
             </li>{" "}
             <div className={`todo-item ${todo.completed ? "hideDiv" : ""}`}>
                 <button onClick={() => setModalIsOpen(true)}>Start Task</button>
+                <button onClick={completeHandler}>Completed</button>
             </div>
-            <button onClick={completeHandler}>Completed</button>
             <button onClick={deleteHandler}>Remove</button>
             <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
                 <button onClick={() => setModalIsOpen(false)}>X</button>
@@ -53,11 +53,6 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                             </div>
                             <br />
                             <div>
-                                {/* <button onClick={start}>Start</button>
-                                <button onClick={pause}>Pause</button>
-                                <button onClick={resume}>Resume</button>
-                                <button onClick={stop}>Stop</button>
-                                <button onClick={reset}>Reset</button> */}
                                 <button onClick={completeHandler}>Completed</button>
                             </div>
                         </React.Fragment>
