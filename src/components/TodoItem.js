@@ -30,27 +30,34 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
                 {text}: <span>{time} Minutes</span>
             </li>{" "}
-            <button onClick={() => setModalIsOpen(true)}>Start Task</button>
+            <div className={`todo-item ${todo.completed ? "hideDiv" : ""}`}>
+                <button onClick={() => setModalIsOpen(true)}>Start Task</button>
+            </div>
             <button onClick={completeHandler}>Completed</button>
             <button onClick={deleteHandler}>Remove</button>
             <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
-                <p>Task Time:{time} Minutes</p>
-                <button onClick={() => setModalIsOpen(false)}>Close</button>
+                <button onClick={() => setModalIsOpen(false)}>X</button>
+                <p>Task Time: {time} Minutes</p>
 
                 <Timer initialTime={setTime} startImmediately={true} direction="backward" lastUnit="m">
                     {({ start, resume, pause, stop, reset }) => (
                         <React.Fragment>
                             <div>
-                                <Timer.Minutes /> minutes
-                                <Timer.Seconds /> seconds
+                                <p>
+                                    Time remaining:{" "}
+                                    <span>
+                                        <Timer.Minutes /> minutes
+                                        <Timer.Seconds /> seconds
+                                    </span>
+                                </p>
                             </div>
                             <br />
                             <div>
-                                <button onClick={start}>Start</button>
+                                {/* <button onClick={start}>Start</button>
                                 <button onClick={pause}>Pause</button>
                                 <button onClick={resume}>Resume</button>
                                 <button onClick={stop}>Stop</button>
-                                <button onClick={reset}>Reset</button>
+                                <button onClick={reset}>Reset</button> */}
                                 <button onClick={completeHandler}>Completed</button>
                             </div>
                         </React.Fragment>
