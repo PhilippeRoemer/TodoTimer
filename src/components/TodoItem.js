@@ -40,7 +40,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                     Remove
                 </button>
             </li>{" "}
-            <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+            <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className={"modalCustomStyle"}>
                 <button onClick={() => setModalIsOpen(false)}>X</button>
                 <p>Task Time: {time} Minutes</p>
 

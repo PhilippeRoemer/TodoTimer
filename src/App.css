@@ -65,6 +65,7 @@ button {
 
 .buttonComplete {
     background-color: chartreuse;
+    margin-left: 200px;
 }
 
 .buttonRemove {
@@ -81,4 +82,12 @@ button {
 
 .hideDiv {
     display: none;
+}
+
+.modalCustomStyle {
+    background-color: aqua;
+    border-radius: 25px;
+    width: 500px;
+    margin: auto;
+    margin-top: 10%;
 }
