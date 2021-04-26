@@ -28,7 +28,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
     return (
         <div>
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
-                {text}: <span>{time} Minutes</span>
+                {text}: <br /> <span className="taskTime">{time} Minutes</span>
             </li>{" "}
             <div className={`todo-item ${todo.completed ? "hideDiv" : ""}`}>
                 <button onClick={() => setModalIsOpen(true)}>Start Task</button>
