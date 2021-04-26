@@ -73,8 +73,14 @@ button {
 
 .todo-item {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.hideDiv {
+    display: none;
 }
 
 .testing {
