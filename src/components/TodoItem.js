@@ -28,13 +28,14 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
     return (
         <div>
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
-                {text}: <br /> <span className="taskTime">{time} Minutes</span>
+                <div>
+                    {text}: <br /> <span className="taskTime">{time} Minutes</span>
+                </div>
+                <div className={`todo-item ${todo.completed ? "hideDiv" : ""}`}>
+                    <button onClick={() => setModalIsOpen(true)}>Start Task</button>
+                </div>
+                <button onClick={deleteHandler}>Remove</button>
             </li>{" "}
-            <div className={`todo-item ${todo.completed ? "hideDiv" : ""}`}>
-                <button onClick={() => setModalIsOpen(true)}>Start Task</button>
-                <button onClick={completeHandler}>Completed</button>
-            </div>
-            <button onClick={deleteHandler}>Remove</button>
             <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
                 <button onClick={() => setModalIsOpen(false)}>X</button>
                 <p>Task Time: {time} Minutes</p>
