@@ -47,8 +47,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                                 <p>
                                     Time remaining:{" "}
                                     <span>
-                                        <Timer.Minutes /> minutes
-                                        <Timer.Seconds /> seconds
+                                        <Timer.Minutes /> minutes <Timer.Seconds /> seconds
                                     </span>
                                 </p>
                             </div>
