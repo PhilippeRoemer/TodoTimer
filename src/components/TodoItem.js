@@ -31,7 +31,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                 <div>
                     {text}: <br /> <span className="taskTime">{time} Minutes</span>
                 </div>
-                <div className={`todo-item ${todo.completed ? "hideDiv" : ""}`}>
+                <div className={`todo-item-hide ${todo.completed ? "hideDiv" : ""}`}>
                     <button onClick={() => setModalIsOpen(true)}>Start Task</button>
                 </div>
                 <button onClick={deleteHandler}>Remove</button>
@@ -41,7 +41,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                 <p>Task Time: {time} Minutes</p>
 
                 <Timer initialTime={setTime} startImmediately={true} direction="backward" lastUnit="m">
-                    {({ start, resume, pause, stop, reset }) => (
+                    {() => (
                         <React.Fragment>
                             <div>
                                 <p>
