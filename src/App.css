@@ -18,17 +18,28 @@
 }
 
 .dark-mode {
-    background-color: #1a1919;
+    background-image: url("images/darkBackground.jpg");
     color: #999;
-    /* height: 100%; */
-    transition: background-color 0.25s ease-in-out;
+    transition: background-image 0.25s ease-in-out;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .light-mode {
-    background-color: #fff;
+    background-image: url("images/lightBackground.jpg");
     color: #333;
-    /* height: 100%; */
-    transition: background-color 0.25s ease-in-out;
+    transition: background-image 0.25s ease-in-out;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.todoFormStyle {
+    background-color: #fff;
+    border-radius: 25px;
 }
 
 .completed {

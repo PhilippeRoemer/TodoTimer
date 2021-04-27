@@ -27,7 +27,7 @@ function TodoForm({ inputText, setInputText, inputTime, setInputTime, todoItems,
     }
 
     return (
-        <div>
+        <div className="todoFormStyle">
             <h1>Todo Timer</h1>
             <label>Enter Todo</label>
             <input type="text" id="todo" name="todo" onChange={TodoTextInput} value={inputText}></input>
