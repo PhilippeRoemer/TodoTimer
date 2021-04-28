@@ -26,7 +26,7 @@ a {
 
 .DarkLightToggle {
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
 .dark-mode {
@@ -49,6 +49,10 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.title {
+    text-align: center;
 }
 
 .todoFormStyle {
