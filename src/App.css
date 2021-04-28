@@ -1,6 +1,18 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -22,6 +34,7 @@
     color: #999;
     transition: background-image 0.25s ease-in-out;
     height: 100%;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,6 +45,7 @@
     color: #333;
     transition: background-image 0.25s ease-in-out;
     height: 100%;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
