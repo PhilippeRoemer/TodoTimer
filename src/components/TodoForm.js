@@ -14,7 +14,7 @@ function TodoForm({ inputText, setInputText, inputTime, setInputTime, todoItems,
         var textInput = document.getElementById("todo").value;
         var timeInput = document.getElementById("time").value;
         if (textInput === "" && timeInput === "") {
-            alert("Fill out both fields, nerd");
+            alert("Fill out both fields");
         } else if (textInput === "") {
             alert("You forgot to enter a todo item");
         } else if (timeInput === "") {
