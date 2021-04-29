@@ -83,8 +83,14 @@ input:checked + .slider:before {
 .DarkLightToggle {
     display: flex;
     justify-content: start;
+    padding-top: 25px;
+    padding-bottom: 10px;
 }
 
+.toggleText {
+    margin-top: 5px;
+    margin-left: 5px;
+}
 .dark-mode {
     background-image: url("images/darkBackground.jpg");
     color: #999;

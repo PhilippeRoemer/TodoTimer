@@ -21,7 +21,7 @@ function App() {
                         <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
                         <span class="slider round"></span>
                     </label>
-                    <h3>{darkMode ? "Dark" : "Light"} mode enabled</h3>
+                    <h3 className="toggleText">{darkMode ? "Dark" : "Light"} mode enabled</h3>
                 </div>
                 <TodoForm inputText={inputText} setInputText={setInputText} inputTime={inputTime} setInputTime={setInputTime} todoItems={todoItems} setTodoItems={setTodoItems} />
                 <TodoList todoItems={todoItems} setTodoItems={setTodoItems} />
