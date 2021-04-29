@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    color: #333;
 }
 
 h1,
@@ -93,7 +94,6 @@ input:checked + .slider:before {
 }
 .dark-mode {
     background-image: url("images/darkBackground.jpg");
-    color: #999;
     transition: background-image 0.25s ease-in-out;
     height: 100%;
     background-attachment: fixed;
@@ -102,9 +102,12 @@ input:checked + .slider:before {
     background-size: cover;
 }
 
+.dark-mode h3 {
+    color: #eee;
+}
+
 .light-mode {
     background-image: url("images/lightBackground.jpg");
-    color: #333;
     transition: background-image 0.25s ease-in-out;
     height: 100%;
     background-attachment: fixed;
