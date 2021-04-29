@@ -183,7 +183,7 @@ li {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #218838;
     border: none;
     color: white;
     padding: 5px 10px;
@@ -196,16 +196,28 @@ button {
 }
 
 .buttonStartTask {
-    background-color: cadetblue;
+    background-color: #0069d9;
 }
 
 .buttonComplete {
-    background-color: chartreuse;
+    background-color: #218838;
     margin-left: 200px;
+    margin-bottom: 20px;
+}
+
+.buttonCompleteList {
+    background-color: #218838;
+    cursor: default;
 }
 
 .buttonRemove {
-    background-color: red;
+    background-color: #c82333;
+}
+
+.buttonClose {
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: #c82333;
 }
 
 .todo-item {
@@ -221,11 +233,15 @@ button {
 }
 
 .modalCustomStyle {
-    background-color: #ddd;
+    background-color: #eee;
     border-radius: 25px;
     width: 500px;
     margin: auto;
     margin-top: 10%;
     border: solid;
     border-width: 1px;
+}
+
+.textCenter {
+    text-align: center;
 }

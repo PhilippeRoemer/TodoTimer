@@ -29,30 +29,34 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
         <div>
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
                 <div>
-                    {text}: <br /> <span className="taskTime">{time} Minutes</span>
+                    {text} <br /> <span className="taskTime">{time} Minutes</span>
                 </div>
                 <div className={`todo-item-hide ${todo.completed ? "hideDiv" : ""}`}>
                     <button onClick={() => setModalIsOpen(true)} className="buttonStartTask">
                         Start Task
                     </button>
                 </div>
+                <div className={`todo-item-hide ${todo.completed ? "" : "hideDiv"}`}>
+                    <button className="buttonCompleteList">Task Completed</button>
+                </div>
                 <button onClick={deleteHandler} className="buttonRemove">
                     Remove
                 </button>
             </li>{" "}
             <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className={"modalCustomStyle"}>
-                <button onClick={() => setModalIsOpen(false)}>X</button>
-                <p>Task Time: {time} Minutes</p>
-
+                <button onClick={() => setModalIsOpen(false)} className="buttonClose">
+                    X
+                </button>
+                <p className="textCenter">
+                    <b>Task Time:</b> {time} Minutes
+                </p>
+                <br />
                 <Timer initialTime={setTime} startImmediately={true} direction="backward" lastUnit="m">
                     {() => (
                         <React.Fragment>
                             <div>
-                                <p>
-                                    Time remaining:{" "}
-                                    <span>
-                                        <Timer.Minutes /> minutes <Timer.Seconds /> seconds
-                                    </span>
+                                <p className="textCenter">
+                                    <b>Time remaining:</b> <Timer.Minutes /> minutes <Timer.Seconds /> seconds
                                 </p>
                             </div>
                             <br />
