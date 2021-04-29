@@ -183,7 +183,7 @@ li {
 }
 
 button {
-    background-color: #218838;
+    background-color: #4caf50;
     border: none;
     color: white;
     padding: 5px 10px;
@@ -200,13 +200,13 @@ button {
 }
 
 .buttonComplete {
-    background-color: #218838;
+    background-color: #4caf50;
     margin-left: 200px;
     margin-bottom: 20px;
 }
 
 .buttonCompleteList {
-    background-color: #218838;
+    background-color: #4caf50;
     cursor: default;
 }
 
