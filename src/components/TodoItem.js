@@ -43,7 +43,7 @@ function TodoItem({ text, time, todo, todoItems, setTodoItems }) {
                     Remove
                 </button>
             </li>{" "}
-            <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className={"modalCustomStyle"}>
+            <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className={"modalCustomStyle"} shouldCloseOnOverlayClick={false}>
                 <button onClick={() => setModalIsOpen(false)} className="buttonClose">
                     X
                 </button>
